@@ -274,6 +274,7 @@ body {
     z-index: 1;
     height: 60vh;
     background-color: ;
+    pointer-events: none; /* Tidak menghalangi klik */
 }
 
 .info .resepsi .merak1 {
@@ -282,6 +283,7 @@ body {
     right: 10px; /* Sesuaikan jarak horizontal */
     z-index: 1;
     height: 60vh;
+    pointer-events: none; /* Tidak menghalangi klik */
 }
 
 .info .pemberkatan .merak2 img, .info .resepsi .merak1 img{
@@ -296,6 +298,7 @@ body {
     z-index: 1;
     animation: swayBottomToTop 5s ease-in-out infinite; /* Animasi gerak kanan-kiri */
     transform-origin: bottom center; /* Titik rotasi di bagian bawah elemen */
+    pointer-events: none; /* Tidak menghalangi klik */
 }
 
 .info .resepsi .bunga1 {
@@ -305,6 +308,7 @@ body {
     z-index: 1;
     animation: swayBottomToTop 5s ease-in-out infinite; /* Animasi gerak kanan-kiri */
     transform-origin: bottom center; /* Titik rotasi di bagian bawah elemen */
+    pointer-events: none; /* Tidak menghalangi klik */
 }
 
 .info .pemberkatan .bunga2 img, .info .resepsi .bunga1 img{
@@ -319,6 +323,7 @@ body {
     z-index: 0;
     animation: swayBottomToTop 5s ease-in-out infinite; /* Animasi gerak kanan-kiri */
     transform-origin: bottom center; /* Titik rotasi di bagian bawah elemen */
+    pointer-events: none; /* Tidak menghalangi klik */
   }
 
   .info .resepsi .daun1 {
@@ -328,6 +333,7 @@ body {
     z-index: 0;
     animation: swayBottomToTop 5s ease-in-out infinite; /* Animasi gerak kanan-kiri */
     transform-origin: bottom center; /* Titik rotasi di bagian bawah elemen */
+      pointer-events: none; /* Tidak menghalangi klik */
 }
 
 .info .pemberkatan .daun2 img, .info .resepsi .daun1 img{
