@@ -273,7 +273,6 @@ body {
     right: -135px; /* Sesuaikan jarak horizontal */
     z-index: 1;
     height: 60vh;
-    background-color: ;
     pointer-events: none; /* Tidak menghalangi klik */
 }
 
