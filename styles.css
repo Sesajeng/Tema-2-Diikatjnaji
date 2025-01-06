@@ -177,7 +177,7 @@ body {
     bottom: 20%; /* posisi vertikal awan */
     width: 35%; /* ukuran awan */
     height: auto;
-    animation: gerakAwan 25s linear infinite; /* Animasi berjalan terus-menerus */
+    animation: gerakAwan 23s linear infinite; /* Animasi berjalan terus-menerus */
 }
 
 .animasi-awan img:nth-child(1) {
@@ -191,6 +191,14 @@ body {
     bottom: 15%;
     left: -40%; /* Mulai dari luar layar kiri */
     animation-delay: 3s; /* Tambahkan jeda untuk awan kedua */
+    z-index: 11; /* Pastikan berada di atas background */
+}
+.animasi-awan img:nth-child(3) {
+    top: 20%; /* Posisi vertikal awan ketiga */
+    left: -50%; /* Mulai dari luar layar kiri */
+    width: 35%; /* Ukuran tetap sama dengan awan pertama/kedua */
+    animation-delay: 10s; /* Jeda animasi agar muncul setelah awan kedua */
+    animation-duration: 30s; /* Durasi sedikit lebih lama agar gerakannya terlihat unik */
     z-index: 11; /* Pastikan berada di atas background */
 }
 
@@ -1976,3 +1984,77 @@ form button:hover {
     transform: translateX(-50px); /* Awalnya dari kiri */
   }
   
+ /* Tampilan untuk Laptop dan Lebar Lebih Kecil */
+@media only screen and (max-width: 1024px) {
+    .left-section {
+        display: none; /* Sembunyikan left-section */
+    }
+
+    .right-section {
+        margin-left: 0; /* Hapus margin untuk full layar */
+        width: 100%; /* Ambil seluruh lebar layar */
+        height: 100%; /* Ambil seluruh tinggi layar */
+    }
+    #opening .overlay h1 {
+        font-size: 2.5rem; /* Ukuran lebih kecil untuk tablet */
+    }
+
+    #opening .overlay h3 {
+        font-size: 1.8rem;
+    }
+
+    #opening .button {
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+
+    #right-section h1 {
+        font-size: 1.8rem;
+    }
+
+    #right-section .animasi-awan img {
+        width: 90px; /* Ukuran awan sedikit lebih kecil */
+    }
+
+    #right-section .image-arch img {
+        max-width: 350px; /* Gambar lebih kecil untuk tablet */
+    }
+}
+
+/* Responsif untuk Handphone */
+@media only screen and (max-width: 768px) {
+    .left-section {
+        display: none; /* Sembunyikan left-section */
+    }
+
+    .right-section {
+        margin-left: 0; /* Hapus margin untuk full layar */
+        width: 100%; /* Ambil seluruh lebar layar */
+        height: 100%; /* Ambil seluruh tinggi layar */
+    }
+
+    #opening .overlay h1 {
+        font-size: 2rem; /* Ukuran lebih kecil */
+    }
+
+    #opening .overlay h3 {
+        font-size: 1.5rem;
+    }
+
+    #opening .button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    #right-section h1 {
+        font-size: 1.5rem;
+    }
+
+    #right-section .animasi-awan img {
+        width: 80px; /* Ukuran awan lebih kecil */
+    }
+
+    #right-section .image-arch img {
+        max-width: 300px; /* Gambar lebih kecil untuk handphone */
+    }
+}
