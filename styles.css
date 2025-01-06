@@ -123,7 +123,15 @@ body {
     transform: scale(1.05);
     font-family: 'Kaisei Opti', serif;
 }
-  
+
+.gift-flower {
+    position: absolute; 
+    top: -3.1em; /* Gambar berada di bagian atas */
+    right: -2em; /* Gambar berada di bagian kanan */
+    width: 10em; /* Menjaga ukuran gambar agar sesuai dengan dimensi aslinya */
+    height: auto; /* Menjaga proporsi gambar */
+}
+
 .container1 {
     margin: 0 auto;
     padding: 20px;
@@ -134,13 +142,7 @@ body {
     text-align: center;
     overflow: hidden; /* Mencegah pseudo-elemen keluar dari container */
 }
-.gift-flower {
-    position: absolute; 
-    top: -3.1em; /* Gambar berada di bagian atas */
-    right: -2em; /* Gambar berada di bagian kanan */
-    width: 10em; /* Menjaga ukuran gambar agar sesuai dengan dimensi aslinya */
-    height: auto; /* Menjaga proporsi gambar */
-}
+
 .container1::before {
     content: '';
     position: absolute;
@@ -156,6 +158,50 @@ body {
 .container1 > * {
     position: relative;
     z-index: 2; /* Membuat konten berada di atas overlay */
+}
+
+/* Animasi Awan */
+.animasi-awan {
+    position: absolute;
+    top: 1%; /* posisi vertikal */
+    left: 0;
+    width: 100%; /* Memastikan awan mengisi layar */
+    height: 30%; /* Tinggi animasi */
+    overflow: hidden;
+    z-index: 10; /* Di atas latar belakang */
+    pointer-events: none; /* Tidak menghalangi klik */
+}
+
+.animasi-awan img {
+    position: absolute;
+    bottom: 20%; /* posisi vertikal awan */
+    width: 35%; /* ukuran awan */
+    height: auto;
+    animation: gerakAwan 25s linear infinite; /* Animasi berjalan terus-menerus */
+}
+
+.animasi-awan img:nth-child(1) {
+    top: 1%;
+    left: -40%; /* Mulai dari luar layar kiri */
+    animation-delay: 0s; /* Tidak ada jeda untuk awan pertama */
+    z-index: 11; /* Pastikan berada di atas background */
+}
+
+.animasi-awan img:nth-child(2) {
+    bottom: 15%;
+    left: -40%; /* Mulai dari luar layar kiri */
+    animation-delay: 3s; /* Tambahkan jeda untuk awan kedua */
+    z-index: 11; /* Pastikan berada di atas background */
+}
+
+/* Keyframes untuk gerakan awan */
+@keyframes gerakAwan {
+    0% {
+        transform: translateX(0); /* Posisi awal */
+    }
+    100% {
+        transform: translateX(120vw); /* Berjalan ke luar layar kanan */
+    }
 }
 
 /* Konten utama */
@@ -228,6 +274,16 @@ body {
     transform: scale(1.05);
 }
 
+.rsvp-button a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.rsvp-button a:hover {
+    color: #E7E7E7;
+}
+
 
 .image-arch {
     margin: 70px auto;
@@ -273,7 +329,7 @@ body {
     right: -135px; /* Sesuaikan jarak horizontal */
     z-index: 1;
     height: 60vh;
-    background-color: ;
+    pointer-events: none; /* Tidak menghalangi klik */
 }
 
 .info .resepsi .merak1 {
@@ -282,6 +338,7 @@ body {
     right: 10px; /* Sesuaikan jarak horizontal */
     z-index: 1;
     height: 60vh;
+    pointer-events: none; /* Tidak menghalangi klik */
 }
 
 .info .pemberkatan .merak2 img, .info .resepsi .merak1 img{
@@ -296,6 +353,7 @@ body {
     z-index: 1;
     animation: swayBottomToTop 5s ease-in-out infinite; /* Animasi gerak kanan-kiri */
     transform-origin: bottom center; /* Titik rotasi di bagian bawah elemen */
+    pointer-events: none; /* Tidak menghalangi klik */
 }
 
 .info .resepsi .bunga1 {
@@ -305,6 +363,7 @@ body {
     z-index: 1;
     animation: swayBottomToTop 5s ease-in-out infinite; /* Animasi gerak kanan-kiri */
     transform-origin: bottom center; /* Titik rotasi di bagian bawah elemen */
+    pointer-events: none; /* Tidak menghalangi klik */
 }
 
 .info .pemberkatan .bunga2 img, .info .resepsi .bunga1 img{
@@ -319,6 +378,7 @@ body {
     z-index: 0;
     animation: swayBottomToTop 5s ease-in-out infinite; /* Animasi gerak kanan-kiri */
     transform-origin: bottom center; /* Titik rotasi di bagian bawah elemen */
+    pointer-events: none; /* Tidak menghalangi klik */
   }
 
   .info .resepsi .daun1 {
@@ -328,6 +388,7 @@ body {
     z-index: 0;
     animation: swayBottomToTop 5s ease-in-out infinite; /* Animasi gerak kanan-kiri */
     transform-origin: bottom center; /* Titik rotasi di bagian bawah elemen */
+      pointer-events: none; /* Tidak menghalangi klik */
 }
 
 .info .pemberkatan .daun2 img, .info .resepsi .daun1 img{
@@ -1200,7 +1261,6 @@ form button:hover {
 }
 
 .footer-container p {
-    margin-button: -5em;
     margin-top: 5px;
     font-size: 0.8rem;
 }
@@ -1222,7 +1282,6 @@ form button:hover {
     font-size: 0.8rem;
     color: #653C3C;
     margin-top: -1em;
-    margin-button: -10em;
 }
 
 
