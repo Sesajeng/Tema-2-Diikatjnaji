@@ -1412,6 +1412,9 @@ form button:hover {
   .portraits-gallery {
     display: grid;
     gap: 10px;
+    margin: 0 auto; /* Galeri tetap di tengah */
+    margin-left: -10px; /* Pindahkan sedikit ke kiri */
+    padding: 0 10px;
   }
   
   .portrait-row {
@@ -1565,6 +1568,7 @@ form button:hover {
     transform: translateY(-50px); /* Mulai dari atas */
     transition: all 1.5s ease-in-out;
   }
+
   #opening .undangan .overlay h1 {
     opacity: 1;
     transform: translateY(0); /* Posisi akhir di tempat semula */
@@ -1581,6 +1585,7 @@ form button:hover {
     margin-bottom: 20px;
     font-family: 'Kaisei Opti', serif;
   }
+
   #opening .undangan .overlay h5 {
     font-size: 1.2rem;
     margin-top : -1em;
@@ -1991,12 +1996,12 @@ form button:hover {
     }
 
     .right-section {
-        margin-left: 0; /* Hapus margin untuk full layar */
-        width: 100%; /* Ambil seluruh lebar layar */
-        height: 100%; /* Ambil seluruh tinggi layar */
+        margin-left: 0; 
+        width: 100%; 
+        height: 100%; 
     }
     #opening .overlay h1 {
-        font-size: 2.5rem; /* Ukuran lebih kecil untuk tablet */
+        font-size: 2.5rem; 
     }
 
     #opening .overlay h3 {
@@ -2013,28 +2018,38 @@ form button:hover {
     }
 
     #right-section .animasi-awan img {
-        width: 90px; /* Ukuran awan sedikit lebih kecil */
+        width: 90px; 
     }
 
     #right-section .image-arch img {
-        max-width: 350px; /* Gambar lebih kecil untuk tablet */
+        max-width: 350px; 
+    }
+    .gift button {
+        padding: 10px 20px; /* Kurangi padding */
+        font-size: 0.8rem; /* Font lebih kecil */
+    }
+
+    .gift button::before {
+        width: 16px; /* Ikon lebih kecil */
+        height: 16px;
+        margin-right: 8px; /* Margin ikon lebih kecil */
     }
 }
 
 /* Responsif untuk Handphone */
 @media only screen and (max-width: 768px) {
     .left-section {
-        display: none; /* Sembunyikan left-section */
+        display: none; 
     }
 
     .right-section {
-        margin-left: 0; /* Hapus margin untuk full layar */
-        width: 100%; /* Ambil seluruh lebar layar */
-        height: 100%; /* Ambil seluruh tinggi layar */
+        margin-left: 0; 
+        width: 100%; 
+        height: 100%; 
     }
 
     #opening .overlay h1 {
-        font-size: 2rem; /* Ukuran lebih kecil */
+        font-size: 2rem; 
     }
 
     #opening .overlay h3 {
@@ -2051,10 +2066,35 @@ form button:hover {
     }
 
     #right-section .animasi-awan img {
-        width: 80px; /* Ukuran awan lebih kecil */
+        width: 80px; 
     }
 
     #right-section .image-arch img {
-        max-width: 300px; /* Gambar lebih kecil untuk handphone */
+        max-width: 300px; 
+    }
+
+    #opening .undangan .overlay h1 {
+        font-size: 2rem;
+        margin-top: 3em;
+      }
+
+      #opening .undangan .overlay p {
+        font-size: 1.2rem;
+        margin-bottom: -5px;
+      }
+
+      #opening .undangan .overlay h3 {
+        font-size: 1rem;
+        margin-top :0.5em;
+      }
+    
+      .gift button {
+        padding: 8px 16px; /* Kurangi padding untuk handphone */
+        font-size: 0.8rem; /* Font lebih kecil */
+    }
+
+    .gift button::before {
+        width: 5px; /* Ikon lebih kecil */
+        margin-right: 10px; /* Kurangi margin ikon */
     }
 }
