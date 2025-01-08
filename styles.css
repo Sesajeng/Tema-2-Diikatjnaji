@@ -2317,4 +2317,19 @@ form button:hover {
         padding-right: 18px;
     }
     
+    .flower-atas img {
+       
+        top: 4em;
+        width: 40%;
+      }
+
+      .custom-container {
+        height: 110vh;
+      }
+
+      .countdown-content h2 {
+        font-size: 4vh;
+        margin-bottom: 2vh;
+        margin-top: 20em;
+      }
 }
